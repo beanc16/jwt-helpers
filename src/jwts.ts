@@ -1,9 +1,7 @@
 import { logger } from '@beanc16/logger';
-import DotnetResponses from 'dotnet-responses';
+import { Forbidden, Unauthorized } from 'dotnet-responses';
 import type express from 'express';
 import jwt from 'jsonwebtoken';
-
-const { Forbidden, Unauthorized } = DotnetResponses;
 
 export type TokenData = string | Buffer | object;
 
