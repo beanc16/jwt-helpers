@@ -1,14 +1,14 @@
 {
   "name": "@beanc16/jwt-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helpers to make JWT handling simpler.",
   "author": {
     "name": "beanc16",
     "url": "https://github.com/beanc16"
   },
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "npx eslint . --ext .ts",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/beanc16/jwt-helpers#readme",
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
