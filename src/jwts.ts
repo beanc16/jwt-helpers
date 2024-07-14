@@ -5,9 +5,13 @@ import jwt from 'jsonwebtoken';
 
 export type TokenData = string | Buffer | object;
 
-export const getAccessToken = (data: TokenData): string => {
+export const getAccessToken = (data: TokenData, expiresInSeconds?: number): string => {
+    const expiresIn = (expiresInSeconds)
+        ? `${expiresInSeconds}s`
+        : process.env.JWT_EXPIRES_IN;
+
     const token = jwt.sign(data, process.env.JWT_SECRET as string, {
-        expiresIn: process.env.JWT_EXPIRES_IN,
+        expiresIn,
     });
 
     return token;
