@@ -15,6 +15,8 @@ Helpers to make JWT handling simpler.
   - [Install](#install)
   - [Usage](#usage)
     - [Generating a JWT Token](#generating-a-jwt-token)
+    - [Validating a JWT Token](#validating-a-jwt-token)
+    - [Getting Data from a JWT Token](#getting-data-from-a-jwt-token)
     - [Authenticating a JWT Token](#authenticating-a-jwt-token)
   - [License](#license)
 
@@ -36,6 +38,22 @@ $ npm install @beanc16/jwt-helpers
 const { getAccessToken } = require("@beanc16/jwt-helpers");
 
 const jwt = getAccessToken({ foo: "bar" });
+```
+
+### Validating a JWT Token
+
+```js
+const { isTokenValid } = require("@beanc16/jwt-helpers");
+
+const jwt = isTokenValid("someToken");
+```
+
+### Getting Data from a JWT Token
+
+```js
+const { getDataFromToken } = require("@beanc16/jwt-helpers");
+
+const data = getDataFromToken("someToken");
 ```
 
 ### Authenticating a JWT Token
