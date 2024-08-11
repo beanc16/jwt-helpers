@@ -2,10 +2,6 @@
 
 Helpers to make JWT handling simpler.
 
-<!-- Badges -->
-![version][gpr-version]
-![release][gpr-release]
-
 
 
 ## Table of Contents
@@ -73,9 +69,3 @@ app.get("/some-url", authenticateTokenServiceToService, (req, res) =>
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
-
-<!-- Shield URLs -->
-[gpr-version]: https://img.shields.io/github/package-json/v/@beanc16/jwt-helpers
-[gpr-release]: https://img.shields.io/github/v/release/@beanc16/jwt-helpers
