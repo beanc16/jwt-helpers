@@ -3,9 +3,8 @@
 Helpers to make JWT handling simpler.
 
 <!-- Badges -->
-![npm][npm-version]
-![license][npm-license]
-![downloads][npm-downloads]
+![version][gpr-version]
+![release][gpr-release]
 
 
 
@@ -78,6 +77,5 @@ app.get("/some-url", authenticateTokenServiceToService, (req, res) =>
 
 
 <!-- Shield URLs -->
-[npm-version]: https://img.shields.io/npm/v/@beanc16/jwt-helpers
-[npm-license]: https://img.shields.io/npm/l/@beanc16/jwt-helpers
-[npm-downloads]: https://img.shields.io/npm/dm/@beanc16/jwt-helpers
+[gpr-version]: https://img.shields.io/github/package-json/v/@beanc16/jwt-helpers
+[gpr-release]: https://img.shields.io/github/v/release/@beanc16/jwt-helpers
