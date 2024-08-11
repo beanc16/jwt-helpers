@@ -25,6 +25,24 @@ const sendForbiddenError = (message: string, res: express.Response, err: jwt.Ver
     });
 };
 
+export const isTokenValid = async (token: string): Promise<boolean> =>
+{
+    return new Promise<boolean>((resolve) => {
+        jwt.verify(token, process.env.JWT_SECRET as string, (err) =>
+        {
+            if (err)
+            {
+                resolve(false);
+            }
+
+            else
+            {
+                resolve(true);
+            }
+        });
+    });
+};
+
 export const authenticateTokenServiceToService = (req: express.Request, res: express.Response, next: express.NextFunction): void =>
 {
     const {
