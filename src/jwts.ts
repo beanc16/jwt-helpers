@@ -43,6 +43,24 @@ export const isTokenValid = async (token: string): Promise<boolean> =>
     });
 };
 
+export const getDataFromToken = async <Response extends TokenData>(token: string): Promise<Response> =>
+{
+    return new Promise<Response>((resolve, reject) => {
+        jwt.verify(token, process.env.JWT_SECRET as string, (err, decodedData) =>
+        {
+            if (err)
+            {
+                reject('Invalid token');
+            }
+
+            else
+            {
+                resolve(decodedData as Response);
+            }
+        });
+    });
+};
+
 export const authenticateTokenServiceToService = (req: express.Request, res: express.Response, next: express.NextFunction): void =>
 {
     const {
