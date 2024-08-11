@@ -16,11 +16,7 @@
     "test": "",
     "test-dev": "npx ts-node src/__tests__/manual/index.ts",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test && npm run lint",
-    "preversion": "npm run lint-src",
-    "version": "git add -A src",
-    "postversion": "git push && git push --tags",
-    "publish": "git checkout main && git push origin main"
+    "prepublishOnly": "npm run test && npm run lint"
   },
   "repository": {
     "type": "git",
